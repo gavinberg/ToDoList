@@ -39,6 +39,8 @@ public class AppModel implements MessageHandler {
     messenger.subscribe("saveItem", this);
     messenger.subscribe("deleteItem", this);
     messenger.subscribe("removeCompletedItems", this);
+    messenger.subscribe("sortToDoUp", this);
+    messenger.subscribe("sortToDoDown", this);
   }
 
   // This method implements the messageHandler method defined in
@@ -91,6 +93,17 @@ public class AppModel implements MessageHandler {
         removeCompletedItems();
         messenger.notify("saved");
         messenger.notify("items", this.getItems());
+          
+      case "sortToDoUp":
+        ToDoItem.compareMethod = 1;
+        Collections.sort(toDoList);
+        messenger.notify("items", this.getItems(), true);
+        break;
+      case "sortToDoDown":
+        ToDoItem.compareMethod = -1;
+        Collections.sort(toDoList);
+        messenger.notify("items", this.getItems(), true);
+        break;
     }
   }
 

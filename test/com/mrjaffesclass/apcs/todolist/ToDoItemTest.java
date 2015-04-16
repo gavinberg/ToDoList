@@ -1,5 +1,6 @@
 package com.mrjaffesclass.apcs.todolist;
 
+import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -116,5 +117,73 @@ public class ToDoItemTest {
     item.toggleDone();
     assertTrue("setDone set done to true", item.isDone());
   }
+
+    /**
+     * Test of getDate method, of class ToDoItem.
+     */
+    @Test
+    public void testGetDate() {
+        System.out.println("getDate");
+        ToDoItem instance = null;
+        Date expResult = null;
+        Date result = instance.getDate();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setDate method, of class ToDoItem.
+     */
+    @Test
+    public void testSetDate() {
+        System.out.println("setDate");
+        Date iDate = null;
+        ToDoItem instance = null;
+        instance.setDate(iDate);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setId method, of class ToDoItem.
+     */
+    @Test
+    public void testSetId() {
+        System.out.println("setId");
+        int id = 0;
+        ToDoItem instance = null;
+        instance.setId(id);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of merge method, of class ToDoItem.
+     */
+    @Test
+    public void testMerge() {
+        System.out.println("merge");
+        ToDoItem anotherItem = null;
+        ToDoItem instance = null;
+        instance.merge(anotherItem);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of compareTo method, of class ToDoItem.
+     */
+    @Test
+    public void testCompareTo() {
+        System.out.println("compareTo");
+        ToDoItem compareToDoItem = null;
+        ToDoItem instance = null;
+        int expResult = 0;
+        int result = instance.compareTo(compareToDoItem);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 
 }
